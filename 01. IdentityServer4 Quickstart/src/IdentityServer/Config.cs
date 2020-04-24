@@ -50,7 +50,7 @@ namespace IdentityServer
                 RequirePkce = true,
                 RedirectUris =
                   new List<string> {
-                       "http://localhost:5436/account/oAuth2", "https://localhost:44339/"
+                       "http://localhost:5436/account/oAuth2", "https://localhost:44339/", "https://www.getpostman.com/oauth2/callback"
                   },
                 PostLogoutRedirectUris =
                   new List<string> {"http://localhost:5436"},
