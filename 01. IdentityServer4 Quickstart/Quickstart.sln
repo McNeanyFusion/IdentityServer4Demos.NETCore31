@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "src\Ident
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.ApiExample", "IdentityServer.ApiExample\IdentityServer.ApiExample.csproj", "{1477481A-B02E-41B0-BFC9-05E55427BB1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.AngularClientExample", "IdentityServer.AngularClientExample\IdentityServer.AngularClientExample.csproj", "{FF236873-5BA8-4536-BD7B-6C7F81D719AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,18 @@ Global
 		{1477481A-B02E-41B0-BFC9-05E55427BB1E}.Release|x64.Build.0 = Release|Any CPU
 		{1477481A-B02E-41B0-BFC9-05E55427BB1E}.Release|x86.ActiveCfg = Release|Any CPU
 		{1477481A-B02E-41B0-BFC9-05E55427BB1E}.Release|x86.Build.0 = Release|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Debug|x86.Build.0 = Debug|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Release|x64.ActiveCfg = Release|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Release|x64.Build.0 = Release|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Release|x86.ActiveCfg = Release|Any CPU
+		{FF236873-5BA8-4536-BD7B-6C7F81D719AF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

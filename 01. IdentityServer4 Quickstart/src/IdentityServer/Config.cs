@@ -40,25 +40,36 @@ namespace IdentityServer
                         "socialnetwork" }
                 },
                 new Client() {
-                     ClientId = "UntrustedExternalApi",
-                     ClientName = "Untrusted External API",
-                    ClientSecrets = new [] { new Secret("secret".Sha256()) },
+                     ClientId = "UntrustedExternalClientBrowser",
+                     ClientName = "Untrusted External Client Browser",
                      AllowedGrantTypes = GrantTypes.Code,
-                     RequireConsent = true,
-                AllowRememberConsent = false,
-                AllowAccessTokensViaBrowser = true,
-                RequirePkce = true,
-                RedirectUris =
-                  new List<string> {
-                       "http://localhost:5436/account/oAuth2", "https://localhost:44339/", "https://www.getpostman.com/oauth2/callback"
-                  },
-                PostLogoutRedirectUris =
-                  new List<string> {"http://localhost:5436"},
-                    AllowedScopes = new [] { "socialnetwork" },
-                    AccessTokenType = AccessTokenType.Jwt
-
-                }
-            };
+                     RequireConsent = false,
+                    AllowRememberConsent = false,
+                    AllowAccessTokensViaBrowser = true,
+                    RequireClientSecret = false,
+                    RequirePkce = true,
+                    RedirectUris =
+                      new List<string> {
+                          "https://localhost:44339/",
+                          "http://localhost:4200/auth-callback"
+                      },
+                    PostLogoutRedirectUris =
+                      new List<string> {
+                          "http://localhost:4200/"
+                      },
+                    AllowedScopes = new [] {
+                            IdentityServerConstants.StandardScopes.OpenId,
+                            IdentityServerConstants.StandardScopes.Profile,
+                            IdentityServerConstants.StandardScopes.Email,
+                            "socialnetwork"
+                    },
+                    AccessTokenType = AccessTokenType.Jwt,
+                    AllowedCorsOrigins =
+                    {
+                        "http://localhost:4200"
+                    }
+            }
+        };
 
         public static IEnumerable<TestUser> Users()
         {

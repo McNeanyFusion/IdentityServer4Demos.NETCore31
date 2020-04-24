@@ -28,6 +28,15 @@ namespace IdentityServer.ApiExample
         {
             services.AddControllers();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.WithOrigins("http://localhost:4200")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+
+
             services.AddAuthentication(o =>
             {
                 o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -60,6 +69,7 @@ namespace IdentityServer.ApiExample
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();
