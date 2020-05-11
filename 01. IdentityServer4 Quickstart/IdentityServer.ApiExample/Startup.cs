@@ -46,7 +46,18 @@ namespace IdentityServer.ApiExample
             {
                 o.Authority = "https://localhost:44339";
                 o.Audience = "socialnetwork";
-                o.RequireHttpsMetadata = false;
+                o.RequireHttpsMetadata = true;
+
+                //IMPORTANT: Should not configure these properties manually
+                //o.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                //{
+                //    ValidateAudience = true,
+                //    ValidateIssuer = true,
+                //    ValidateIssuerSigningKey = true,
+                //    ValidateLifetime = true,
+                //    ValidAudience = true,
+                //    Va
+                //};
             });
 
             //services.AddAuthentication("Bearer")

@@ -67,7 +67,8 @@ namespace IdentityServer
                     AllowedCorsOrigins =
                     {
                         "http://localhost:4200"
-                    }
+                    },
+                     
             }
         };
 
